@@ -73,7 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item has-treeview menu-open">
                         <a href="#" class="nav-link active">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <i class="nav-icon fas fa-newspaper"></i>
                             <p>
                                 News
                                 <i class="right fas fa-angle-left"></i>
@@ -94,20 +94,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </li>
                         </ul>
                     </li>
-                    {{--<li class="nav-item">--}}
-                        {{--<a href="#" class="nav-link">--}}
-                            {{--<i class="nav-icon fas fa-th"></i>--}}
-                            {{--<p>--}}
-                                {{--add News--}}
-                                {{--<span class="right badge badge-danger">New</span>--}}
-                            {{--</p>--}}
-                        {{--</a>--}}
-                    {{--</li>--}}
                 </ul>
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item has-treeview menu-open">
                         <a href="" class="nav-link active">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <i class="nav-icon fas fa-book"></i>
                             <p>
                                 Blogs
                                 <i class="right fas fa-angle-left"></i>
@@ -128,20 +119,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </li>
                         </ul>
                     </li>
-                    {{--<li class="nav-item">--}}
-                        {{--<a href="#" class="nav-link">--}}
-                            {{--<i class="nav-icon fas fa-th"></i>--}}
-                            {{--<p>--}}
-                                {{--add News--}}
-                                {{--<span class="right badge badge-danger">New</span>--}}
-                            {{--</p>--}}
-                        {{--</a>--}}
-                    {{--</li>--}}
                 </ul>
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item has-treeview menu-open">
                         <a href="" class="nav-link active">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <i class="nav-icon fas fa-handshake"></i>
                             <p>
                                 Conference
                                 <i class="right fas fa-angle-left"></i>
@@ -158,6 +140,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <a href="/admin/add-conference" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>add Conference</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <li class="nav-item has-treeview menu-open">
+                        <a href="" class="nav-link active">
+                            <i class="nav-icon fas fa-images"></i>
+                            <p>
+                                slide show
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/admin/slideShow-list" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>slide show list</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/admin/add-slideShow" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>add slide show</p>
                                 </a>
                             </li>
                         </ul>

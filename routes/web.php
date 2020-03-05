@@ -14,14 +14,8 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
 //main routes
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/' , 'indexController@index')->name('index');
 Route::get('/news', 'NewsController@show');
 Route::get('/news/{id}', 'NewsController@single')->name('news.single');
 Route::get('/about-us', function () {
@@ -38,7 +32,7 @@ Route::get('/conference/{id}' , 'ConferenceController@single');
 
 
 //admin
-Route::prefix('/admin')->group(function () {
+Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::get('/news', 'NewsController@index')->name('news.index');
     Route::get('/conferences', 'ConferenceController@index')->name('confs.index');
     Route::get('/blogs', 'BlogController@index')->name('blogs.index');
@@ -51,19 +45,22 @@ Route::prefix('/admin')->group(function () {
     Route::get('/add-conference', function () {
         return view('admin.add-conf');
     });
-    Route::post('/add-news' , 'NewsController@create')->name('news.create')->middleware('auth');
-    Route::post('/add-blog' , 'BlogController@create')->name('blog.create')->middleware('auth');
-    Route::post('/add-conference' , 'ConferenceController@create')->name('conference.create')->middleware('auth');
+    Route::post('/add-news' , 'NewsController@create')->name('news.create');
+    Route::post('/add-blog' , 'BlogController@create')->name('blog.create');
+    Route::post('/add-conference' , 'ConferenceController@create')->name('conference.create');
     Route::get('/edit-news/{id}' , 'NewsController@edit')->name('news.edit');
     Route::get('/edit-conference/{id}' , 'ConferenceController@edit')->name('conference.edit');
     Route::get('/edit-blog/{id}' , 'BlogController@edit')->name('blog.edit');
-    Route::post('/edit-news/{id}' , 'NewsController@update')->name('news.update')->middleware('auth');
-    Route::post('/edit-conference/{id}' , 'ConferenceController@update')->name('conference.update')->middleware('auth');
-    Route::post('/edit-news/{id}' , 'BlogController@update')->name('blog.update')->middleware('auth');
+    Route::post('/edit-news/{id}' , 'NewsController@update')->name('news.update');
+    Route::post('/edit-conference/{id}' , 'ConferenceController@update')->name('conference.update');
+    Route::post('/edit-news/{id}' , 'BlogController@update')->name('blog.update');
+    Route::get('/add-slideShow' , 'SlideShowController@create');
+    Route::get('/slideShow-list' , 'SlideShowController@index');
+    Route::post('/add-slideShow' , 'SlideShowController@store');
 });
 
 
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 Route::delete('/{table}/{id}', 'DeleteAndSearchController@delete')->name('delete');

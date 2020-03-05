@@ -16,25 +16,17 @@
                         </ul>
                         <!-- The slideshow -->
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/slider.png" alt="Los Angeles">
-
-
-
-
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/slider.png" alt="Chicago">
-
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/slider.png" alt="New York">
-
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/slider.png" alt="New York">
-
-                            </div>
+                            @foreach($slides as $key => $slide)
+                                @if($key == 0)
+                                      <div class="carousel-item active">
+                                          <img src="/images/slideShow/{{ $slide->image }}" alt="Los Angeles">
+                                      </div>
+                                    @else
+                                    <div class="carousel-item">
+                                        <img src="/images/slideShow/{{ $slide->image }}" alt="Chicago">
+                                    </div>
+                                @endif
+                            @endforeach
                         </div>
                         <!-- Left and right controls -->
                         <a class="carousel-control-prev footer" href="#slider-animation" data-slide="prev"><i
@@ -43,9 +35,6 @@
                                     class="fas fa-chevron-left"></i></a>
 
                     </div>
-
-
-
                 </div>
 
             </div>
@@ -57,61 +46,25 @@
                 <div id="blog-item">
                     <div class="title-h3">
                         <h3> آخرین مقالات</h3>
-                        <a htef="" class="more"> مشاهده همه</a>
+                        <a href="/news" class="more"> مشاهده همه</a>
                     </div>
                     <div class="large-12 blog-item1 row">
-                        <div class="col-xs-12 col-sm-3">
-                            <div class="item col">
-                                <a href="">
-                                    <div class="blog-item-img"> <img class="bg-movei-lnk" src="images/Layer 9.png"/></div>
-                                    <div class="des1-item">
-                                        <h3> عکس العمل های آلرژیتیک     </h3>
-                                        <span class="description">
-                                       اثرات بهداشتی سیگارهای الکترونیکی.
-                                    </span>
-                                    </div>
-                                </a>
+                        @foreach($news as $new)
+                            <div class="col-xs-12 col-sm-3">
+                                <div class="item col">
+                                    <a href="/news/{{ $new->id }}">
+                                        <div class="blog-item-img"> <img class="bg-movei-lnk" src="/images/news/{{ $new->image }}"/></div>
+                                        <div class="des1-item">
+                                            <h3> {{ $new->title }}</h3>
+                                            <span class="description">
+                                               {{ substr($new->body , 0 , 50) }} ...
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-3">
-                            <div class="item col">
-                                <a href="">
-                                    <div class="blog-item-img"> <img class="bg-movei-lnk" src="images/Layer 9.png"/></div>
-                                    <div class="des1-item">
-                                        <h3> عکس العمل های آلرژیتیک     </h3>
-                                        <span class="description">
-                                       اثرات بهداشتی سیگارهای الکترونیکی.
-                                    </span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-3">
-                            <div class="item col">
-                                <a href="">
-                                    <div class="blog-item-img"> <img class="bg-movei-lnk" src="images/Layer 9.png"/></div>
-                                    <div class="des1-item">
-                                        <h3> عکس العمل های آلرژیتیک     </h3>
-                                        <span class="description">
-                                       اثرات بهداشتی سیگارهای الکترونیکی.
-                                    </span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-3">
-                            <div class="item col">
-                                <a href="">
-                                    <div class="blog-item-img"> <img class="bg-movei-lnk" src="images/Layer 9.png"/></div>
-                                    <div class="des1-item">
-                                        <h3> عکس العمل های آلرژیتیک     </h3>
-                                        <span class="description">
-                                       اثرات بهداشتی سیگارهای الکترونیکی.
-                                    </span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
             </div>
