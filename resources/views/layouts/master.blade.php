@@ -74,6 +74,8 @@
                     <li><a href="/conferences">  همایش ها </a></li>
                     <li><a href="/news"> اخبار</a></li>
                     <li><a href="/blogs"> بلاگ ها</a></li>
+                    <li><a href="/academies"> آکادمی</a></li>
+                    <li><a href=""> انجمن ها</a></li>
                 </nav>
             </div>
         </div>

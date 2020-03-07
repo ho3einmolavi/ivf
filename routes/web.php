@@ -25,6 +25,7 @@ Route::get('/blogs' , 'BlogController@show');
 Route::get('/blog/{id}' , 'BlogController@single')->name('blog.single');
 Route::get('/conferences' , 'ConferenceController@show');
 Route::get('/conference/{id}' , 'ConferenceController@single');
+Route::get('/academies' , 'AcademyController@index');
 
 
 
@@ -57,6 +58,12 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::get('/add-slideShow' , 'SlideShowController@create');
     Route::get('/slideShow-list' , 'SlideShowController@index');
     Route::post('/add-slideShow' , 'SlideShowController@store');
+    Route::get('/add-academy' , 'AcademyController@create');
+    Route::post('/add-academy' , 'AcademyController@store');
+    Route::get('/academies-list' , 'AcademyController@show');
+    Route::get('/category-list' , 'CategoryController@index');
+    Route::get('/add-category' , 'CategoryController@create');
+    Route::post('/add-category' , 'CategoryController@store');
 });
 
 

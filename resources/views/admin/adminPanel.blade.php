@@ -179,6 +179,65 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     {{--</a>--}}
                     {{--</li>--}}
                 </ul>
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <li class="nav-item has-treeview menu-open">
+                        <a href="" class="nav-link active">
+                            <i class="nav-icon fas fa-school"></i>
+                            <p>
+                                academy
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/admin/academies-list" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Academies list</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/admin/add-academy" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>add Academy</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    {{--<li class="nav-item">--}}
+                    {{--<a href="#" class="nav-link">--}}
+                    {{--<i class="nav-icon fas fa-th"></i>--}}
+                    {{--<p>--}}
+                    {{--add News--}}
+                    {{--<span class="right badge badge-danger">New</span>--}}
+                    {{--</p>--}}
+                    {{--</a>--}}
+                    {{--</li>--}}
+                </ul>
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <li class="nav-item has-treeview menu-open">
+                        <a href="" class="nav-link active">
+                            <i class="nav-icon fas fa-list"></i>
+                            <p>
+                                category for academies
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/admin/category-list" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>categories list</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/admin/add-category" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>add category</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
             </nav>
             <!-- /.sidebar-menu -->
